@@ -1,0 +1,23 @@
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 0;
+    background-color: blue;
+    color: cornsilk;
+    padding-left: 70px;
+    padding-right: 90px;
+}
+.menu{
+    padding-top: 20px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-around;
+    flex: auto;
+}
+.header_name{
+    padding-left: 20px;
+}
+.header_support{
+    padding-left: 20px;
+}
