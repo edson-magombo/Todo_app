@@ -15,6 +15,16 @@
     justify-content: space-around;
     flex: auto;
 }
+ .link {
+    text-decoration: none;
+    color:white;
+}
+.link:hover{
+    /* background-color: hotpink; */
+    font-weight: bold;
+    color: black;
+    border-bottom: 2px solid skyblue;
+}
 .header_name{
     padding-left: 20px;
 }

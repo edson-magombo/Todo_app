@@ -1,5 +1,7 @@
 import React from 'react';
-import HelpOutlineIcon from "./@material-ui/icons/HelpOutlineIcon";
+import { Link } from 'react-router-dom';
+// import  HelpOutLineIcon from "@material-ui/icon/HelpOutLine";
+// import HelpOutlineIcon from "./@material-ui/icon/HelpOutline";
 import "./Header.css";
 
 function Header() {
@@ -14,14 +16,14 @@ function Header() {
       <h1>Campus Maintenance Management System</h1>
       </div>
       <div className = "menu">
-        <h4>HOME</h4>
-        <h4>INQUIRES</h4>
-        <h4>ABOUT US</h4>
+        <Link className = "link" to = "/">HOME</Link>
+        <Link className = "link" to = "/">INQUIRES</Link>
+        <Link className = "link" to = "/">ABOUT US</Link>
       </div>
       </div>
       <div className= "header_support">
         <h4>
-          <HelpOutlineIcon />
+          {/* <HelpOutLineIcon /> */}
           Support</h4>
       </div>
     </div>
@@ -29,3 +31,15 @@ function Header() {
 }
 
 export default Header;
+
+
+
+// <!-- The core Firebase JS SDK is always required and must be listed first -->
+// <script src="/__/firebase/8.8.0/firebase-app.js"></script>
+
+// <!-- TODO: Add SDKs for Firebase products that you want to use
+//      https://firebase.google.com/docs/web/setup#available-libraries -->
+// <script src="/__/firebase/8.8.0/firebase-analytics.js"></script>
+
+// <!-- Initialize Firebase -->
+// <script src="/__/firebase/init.js"></script>
