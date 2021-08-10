@@ -1,15 +1,20 @@
 import React from 'react';
+import {useStateValue} from './StateProvider'
 // import { Link } from 'react-router-dom';
 import "./Landingpage.css";
 import { auth, provider } from '../firebase';
 // import 'firebase/firestore';
+import {actionTypes} from './reducer'
 function Landingpage() {
-
+const [state, dispatch] = useStateValue();
     const signIn = () =>{
       auth
       .signInWithPopup(provider)
       .then((result) => {
-        console.log();
+        dispatch({
+          type: actionTypes.SET_USER,
+          user: result.user,
+        });
       })
       .catch((error)=>
         alert(error.message)

@@ -3,8 +3,13 @@ import { Link } from 'react-router-dom';
 // import  HelpOutLineIcon from "@material-ui/icon/HelpOutLine";
 // import HelpOutlineIcon from "./@material-ui/icon/HelpOutline";
 import "./Header.css";
+import { useStateValue } from './StateProvider';
 
 function Header() {
+  const [{user}]= useStateValue();
+  const LogOut = () => {
+
+  }
   return (
     <div className="header">
         <div className= "header_log">
@@ -22,9 +27,13 @@ function Header() {
       </div>
       </div>
       <div className= "header_support">
-        <h4>
-          {/* <HelpOutLineIcon /> */}
-          Support</h4>
+        {/* <HelpOutLineIcon /> */}
+        <Link className ="link" to ="/"> Support</Link>
+        <div className = "name">
+          <h6>{user.displayName} <button className= "button" onClick ={LogOut}>LogOut</button></h6>
+        </div>
+        
+          
       </div>
     </div>
   );

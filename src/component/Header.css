@@ -31,3 +31,16 @@
 .header_support{
     padding-left: 20px;
 }
+.header_support h4:hover{
+    font-weight: bold;
+    color:crimson;
+    border-bottom: 2px solid red;
+}
+.button{
+    border-radius: 99px;
+}
+.button:hover{
+    border-radius: 90px;
+    font-weight: bold;
+    background-color: darkgray;
+}

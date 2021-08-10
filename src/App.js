@@ -1,28 +1,29 @@
 import React, {useState, useEffect } from 'react'
 import './App.css';
 import Header from './component/Header';
-import Footer from "./component/Footer";
+import Footer from "./component/Footer/Footer";
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Landingpage from './component/Landingpage';
 import Inquiry from './component/Inquiry';
 import  db   from "./firebase";
+import { useStateValue } from './component/StateProvider';
 
 
 function App(){
-  const [user, setUser] = useState('null');
+  const [{user}, setUser] = useStateValue();
   const [inquirie, setInquirie] = useState([
     { 
       username: "Edson Magombo",
       message: "its possible",
       timestamp: "2021-03-40  08:09",
-      imageUrl:"https://lh3.googleusercontent.com/a-/AOh14GipjoriEK-uqJVAZLR5Gcp9-XhzP5sniGmk1Se0=s96-c"
+      imageUrl:"https://www.unima.ac.mw/images/slider/campus/campus4.jpg"
 
     },
     {
       username: "chimutu stevie",
       message: "its REALLY WORKING",
       timestamp: "2021-03-40  08:09",
-      imageUrl:"https://lh3.googleusercontent.com/a-/AOh14GipjoriEK-uqJVAZLR5Gcp9-XhzP5sniGmk1Se0=s96-c"
+      imageUrl:"https://www.unima.ac.mw/images/slider/campus/campus4.jpg"
     }
   ]);
   //EFFECT --> Runs a piece of code on a specific condition 
@@ -64,8 +65,8 @@ return (
       />
       ))}
       
-      <Inquiry username = "Ruth" message= "We need your fast assistance here in makata hostel" 
-      imageUrl="https://lh3.googleusercontent.com/a-/AOh14GipjoriEK-uqJVAZLR5Gcp9-XhzP5sniGmk1Se0=s96-c"
+      <Inquiry username = "Clement" message= "We need your fast assistance here in Chirunga hostel" 
+      imageUrl="https://www.unima.ac.mw/images/slider/campus/campus4.jpg"
       timestamp= "2021-09-21 08:05" />
      
        </div>
