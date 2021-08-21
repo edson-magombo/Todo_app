@@ -1,22 +1,22 @@
 import React from 'react';
 import "./Inquiry.css";
 import Avatar  from "@material-ui/core/Avatar"; 
-function Inquiry({username, timestamp, imageUrl, message}) {
+function Inquiry({displayName, timestamp, imageURL, message}) {
    
     return (
         <div className = "inquiry">
              {/* image */}
              <div className = "inquiry_header">
              <Avatar className= "avatar" src="/static/image/avatar/1.png" 
-            alt={username} />
+            alt={displayName} />
             
             {/* header + avatar + username */}
          
-            <h3>{username}</h3>
+            <h3>{displayName}</h3>
             <h5 className= "time">{timestamp}</h5>
             </div>
              {/* image */}
-             <img className= "image" src={imageUrl} 
+             <img className= "image" src={imageURL} 
             alt="" />
            
             {/* inquiry */}

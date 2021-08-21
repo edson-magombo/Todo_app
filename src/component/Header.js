@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom';
 // import HelpOutlineIcon from "./@material-ui/icon/HelpOutline";
 import "./Header.css";
 import { useStateValue } from './StateProvider';
+import { auth } from '../firebase';
+import reducer from './reducer';
 
 function Header() {
   const [{user}]= useStateValue();
-  const LogOut = () => {
 
-  }
   return (
     <div className="header">
         <div className= "header_log">
@@ -30,7 +30,9 @@ function Header() {
         {/* <HelpOutLineIcon /> */}
         <Link className ="link" to ="/"> Support</Link>
         <div className = "name">
-          <h6>{user.displayName} <button className= "button" onClick ={LogOut}>LogOut</button></h6>
+          <h6>{user.displayName} <button className= "button" onClick={(e)=> {
+            e.preventDefault();
+            auth.signOut(); }}>LogOut</button></h6>
         </div>
         
           
