@@ -1,31 +1,37 @@
-import React from 'react';
+import React, {useState, useEffect } from 'react';
 import "./Inquiry.css";
-import Avatar  from "@material-ui/core/Avatar"; 
-function Inquiry({displayName, timestamp, imageURL, message}) {
-   
-    return (
+import Post from "./Post" 
+import  db   from "../firebase"; 
+function Inquiry() {
+    const [inquiries, setInquiries] = useState([]);
+  //EFFECT --> Runs a piece of code on a specific condition 
+useEffect(() => {
+db.collection("inquiries").onSnapshot(snapshot =>{
+  setInquiries(
+    snapshot.docs.map((doc) =>  ({
+      id: doc.id,
+      inquiry: doc.data()
+    })));
+  
+  })
+}, []); 
+console.log("MESSAGES>>>>" , inquiries);
+
+
+return (
+        
         <div>
-        <div className = "inquiry">
-             {/* image */}
-             <div className = "inquiry_header">
-             <Avatar className= "avatar" src="/static/image/avatar/1.png" 
-            alt={displayName} />
-            
-            {/* header + avatar + username */}
-         
-            <h3>{displayName}</h3>
-            <h5 className= "time">{timestamp}</h5>
-            </div>
-             {/* image */}
-             <img className= "image" src={imageURL} 
-            alt="" />
-           
-            {/* inquiry */}
-            <h3 className = "message">{message}</h3>
-        </div>
-        <div> 
-            <h1>hello inquiry</h1>
-        </div>
+        {
+          inquiries.map(({id, inquiry})=>(
+            <Post 
+            key={id}
+            displayName={inquiry.displayName}
+            message={inquiry.message}
+            imageURL={inquiry.imageURL}
+            // timestamp={inquiry.timestamp}
+            />
+          ))
+        }
         </div>
     )
 }

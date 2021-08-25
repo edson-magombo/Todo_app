@@ -1,30 +1,20 @@
-import React, {useState, useEffect } from 'react'
+import React from 'react'
 import './App.css';
+import { SliderData } from './component/SliderData';
+import ImageSlider from "./component/ImageSlider"
 import Header from './component/Header';
 import Footer from "./component/Footer/Footer";
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Landingpage from './component/Landingpage';
 import Inquiry from './component/Inquiry';
-import  db   from "./firebase";
+
 import { useStateValue } from './component/StateProvider';
+
 
 
 function App(){
   const [{user}, setUser] = useStateValue('');
-  const [inquiries, setInquiries] = useState([]);
-  //EFFECT --> Runs a piece of code on a specific condition 
-useEffect(() => {
-db.collection("inquiries").onSnapshot(snapshot =>{
-  setInquiries(
-    snapshot.docs.map((doc) =>  ({
-      id: doc.id,
-      inquiry: doc.data()
-    })));
-  
-  })
-  
-}, []); 
-console.log("MESSAGES>>>>" , inquiries);
+ 
 
 return (
     <div className="App">
@@ -36,34 +26,13 @@ return (
            
       <Header />
       <Switch>
-        <Route path ="/Inquiry" >
+      <Route exact path='/' render ={(props)=> <ImageSlider slides={SliderData} props = {props} />   } />
+        <Route exact path ='/Inquiry' render={(props)=> <Inquiry props = {props}/> }/>
+        <Route exact path='/' render ={(props)=> <Footer props={props}  />   } />
         
-        {/* <Footer /> */}
-          </Route>
-          
       </Switch>
-    <div className= "inquiry">
-      {
-      inquiries.map(({id, inquiry}) =>(
-      <Inquiry
-      key= {id}
-      displayName={inquiry.displayName} 
-      message={inquiry.message}
-      imageURL={inquiry.imageURL}
-      // timestamp ={inquiry.timestamp} 
-    
-      />
-      ))}
-      
-      {/* <Inquiry displayName = "Clement" message= "We need your fast assistance here in Chirunga hostel" 
-      imageURL="https://previews.123rf.com/images/michaeljung/michaeljung1202/michaeljung120200116/12431976-happy-blue-collar-worker-working-in-workshop.jpg"
-      timestamp= "2021-09-21 08:05" />
-      */}
-     <div>
       <Footer />
-      </div>
-       </div>
-       
+      
       </>
       )}
       </Router>
