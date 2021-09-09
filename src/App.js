@@ -27,12 +27,12 @@ return (
       <Header />
       <Switch>
       <Route exact path='/' render ={(props)=> <ImageSlider slides={SliderData} props = {props} />   } />
+      {/* <Route exact path='/' render ={(props)=> <Footer props={props}  />   } /> */}
         <Route exact path ='/Inquiry' render={(props)=> <Inquiry props = {props}/> }/>
-        <Route exact path='/' render ={(props)=> <Footer props={props}  />   } />
+        {/* <Route exact path='/' render ={(props)=> <Footer props={props}  />   } /> */}
         
       </Switch>
       <Footer />
-      
       </>
       )}
       </Router>

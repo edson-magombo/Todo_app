@@ -2,7 +2,10 @@ import React, {useState, useEffect } from 'react';
 import "./Inquiry.css";
 import Post from "./Post" 
 import  db   from "../firebase"; 
+import ImageUpload from './ImageUpload';
+import { useStateValue } from './StateProvider';
 function Inquiry() {
+  const [{user}]= useStateValue(); 
     const [inquiries, setInquiries] = useState([]);
   //EFFECT --> Runs a piece of code on a specific condition 
 useEffect(() => {
@@ -19,8 +22,11 @@ console.log("MESSAGES>>>>" , inquiries);
 
 
 return (
-        
-        <div>
+  <div className="inquiries1"> 
+          <div className="upload">
+             <ImageUpload displayName={user.displayName} /> 
+             </div>
+             <div className="inquiries">
         {
           inquiries.map(({id, inquiry})=>(
             <Post 
@@ -28,10 +34,13 @@ return (
             displayName={inquiry.displayName}
             message={inquiry.message}
             imageURL={inquiry.imageURL}
-            // timestamp={inquiry.timestamp}
+            timestamp={Date.now()}
             />
           ))
-        }
+        }</div>
+
+
+    
         </div>
     )
 }

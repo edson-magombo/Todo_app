@@ -2,20 +2,13 @@
     position: fixed;
     bottom: 0;
     width: 100%;
-  background-color: blue;
+  background-color:  rgb(68, 68, 194);
   color: white;
     display: flex;
     flex-direction: column;
     margin-bottom: 0px;
     font-weight: bold;
   }
-  .facebook{
-    text-align: center;
-    color: white;
-  }
-  /* .facebook > .MuiSvgIcon-root{
-    
-    color:black; */
   
   .footer-social-media {
     display: flex;
@@ -84,4 +77,26 @@
     font-size: large;
     margin: 0px 20px;
   }
-  
+  .footer-info_story > .MuiSvgIcon-root {
+    font-size: 16px;
+    color: honeydew;
+    padding-left: 16px;
+  }
+  .phoneicon{
+    display: flex;
+  }
+  .phoneicon  > .MuiSvgIcon-root {
+    font-size: 16px;
+    padding-right: 4px;
+  }
+  .downfooter{
+    padding: 4px 16px 4px 16px;
+    border-top: 2px solid gray;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: rgb(240, 229, 229);
+  }
+  .downfooter .MuiSvgIcon-root{
+    font-size: 10px;
+  }

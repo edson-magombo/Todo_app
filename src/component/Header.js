@@ -26,12 +26,12 @@ function Header() {
       </div>
       </div>
       <div className= "header_support">
-        {/* <HelpOutLineIcon /> */}
-        <Link className ="link" to ="/"> Support</Link>
+        
+        
         <div className = "name">
           <h6>{user.displayName} <button className= "button" onClick={(e)=> {
             e.preventDefault();
-            auth.signOut(); }}>LogOut</button></h6>
+            auth.signOut() }}>LogOut</button></h6>
         </div>
         
           

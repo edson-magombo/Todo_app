@@ -1,55 +1,74 @@
 import React from 'react'
 import './Footer.css'
+import { Link } from 'react-router-dom';
+import MessageIcon from '@material-ui/icons/Message';
+import CallIcon from '@material-ui/icons/Call';
 import FacebookIcon from '@material-ui/icons/Facebook';
+import CopyrightIcon from '@material-ui/icons/Copyright';
 function Footer() {
     
     return (
         <section className="footer">
            <hr className="footer-separotor" />
-           <section className ="facebook">
-               
-              <a href= "/" target="_blank" rel="noopener nonreferrer"><FacebookIcon /></a> 
-               </section> 
+        
 
                <section className= "footer-info"> 
 
                    <section className="footer-info-left">
                     <section className="footer-info_name">
-                        WE REPAIR
+                        <h5>University Of Malawi</h5>
                         <section className="footer-info_returns">
-                            returns Policy
-                            <br /> 
-                            Delivery
+                        <h6> P.O Box 280</h6>
+                            <h6>Zomba</h6>
+                            <h6> Malawi, Central Africa.</h6>
+                            <div className=" phoneicon">
+                             <CallIcon /> <h6> 0152422 </h6>
+                             </div>
+                             <div className=" phoneicon">
+                             <MessageIcon /> <h6> maintenance@cc.ac.mw </h6>
+                             </div>
                             </section> 
+
                     </section>
                    </section>
 
                    <section className="footer-info-center">
                    <section className="footer-info_email">
                 
-                        maintenance.cc.ac.mw
+                        Facility Maintenance
                         <section className="footer-info_returns">
-                            returns Policy
+                        Policy
                             <br /> 
-                            Delivery
+                        
                             </section> 
                             </section>
 
                    </section>
                    
                
-               <section className="footer-info-right">
+               <section className="footer-info-rigt">
                 <section className= "footer-info_number">
-                    Hotline +265 09999
+
+                <div className= "header_support">
+        
+                 <Link className ="link" to ="/"> Support</Link>
+                    </div>
+
+                
                     <section className="footer-info_story">
-                        My story
+                 <FacebookIcon />
                         <br />
-                        uhuh
+                        
                     </section>
                 </section>
                </section>
                </section>
-              
+              <div className = "downfooter"> 
+              <h6>copyright
+                  <CopyrightIcon />2021 -All Rights Reserved - Unima
+              </h6>
+              <h6>Developed by Group 8 </h6>
+              </div>
         </section>
     )
 }
