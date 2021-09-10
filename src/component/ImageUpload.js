@@ -1,7 +1,7 @@
  import {useState} from 'react';
  import { Button } from '@material-ui/core'
 import { storage} from '../firebase';
-// import firebase from 'firebase';
+import firebase from 'firebase';
 import  db   from "../firebase";
 
 function ImageUpload({displayName} ) {
@@ -39,14 +39,14 @@ function ImageUpload({displayName} ) {
                 .then(url =>{
                   db.collection("inquiries").add({
                       timestamp:Date.now(), 
-                  //   timestamp: firebase.firestore.FieldValue.serveTimestamp(),
+                    // timestamp: firebase.firestore.FieldValue.serveTimestamp(),
                       message:message,
                       imageURL: url,
                       displayName:displayName, 
                   });
                   setProgress(0);
                   setMessage("");
-                  setImage(null);
+                  setImage("");
                   
                 });
             }
@@ -56,7 +56,7 @@ function ImageUpload({displayName} ) {
         < div className= "imageupload">
 
             <h1>
-                You can send your inquiries now!
+                Report your inquiries here!
             </h1>
 
         <progress className="imageupload_progress" value={progress} max="100" />
