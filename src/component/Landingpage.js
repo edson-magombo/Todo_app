@@ -196,7 +196,7 @@ return ()=>{
             <div className="signin">
               <h1>Sign up to start the sessions</h1>
               <Button className="signup-btn" onClick = {()=>setOpenSignIn(true)}>Sign In</Button>
-              <Button className="signup-btn" onClick = {()=>setOpen(true)}>Sign Up</Button>
+              <Button className="signup-btn" onClick = {()=>setOpen(true)}>Register</Button>
             </div>
             
             <div className="services-list">

@@ -3,7 +3,6 @@ import './Footer.css'
 import { Link } from 'react-router-dom';
 import MessageIcon from '@material-ui/icons/Message';
 import CallIcon from '@material-ui/icons/Call';
-import FacebookIcon from '@material-ui/icons/Facebook';
 import CopyrightIcon from '@material-ui/icons/Copyright';
 function Footer() {
     
@@ -56,15 +55,15 @@ function Footer() {
 
                 
                     <section className="footer-info_story">
-                 <FacebookIcon />
-                        <br />
+                 
+                      
                         
                     </section>
                 </section>
                </section>
                </section>
               <div className = "downfooter"> 
-              <h6>copyright
+              <h6>Copyright
                   <CopyrightIcon />2021 -All Rights Reserved - Unima
               </h6>
               <h6>Developed by Group 8 </h6>
