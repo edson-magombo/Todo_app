@@ -3,6 +3,7 @@ import './App.css';
 import { SliderData } from './component/SliderData';
 import ImageSlider from "./component/ImageSlider"
 import Header from './component/Header';
+import AdminPage from './component/AdminPage';
 import Footer from "./component/Footer/Footer";
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Landingpage from './component/Landingpage';
@@ -12,8 +13,8 @@ import { useStateValue } from './component/StateProvider';
 
 
 
-function App(){
-  const [{user}, setUser] = useStateValue('');
+function App({displayName}){
+  const [{user}] = useStateValue('');
  
 
 return (
@@ -22,9 +23,15 @@ return (
          { !user ? (
            <Landingpage />
          ): (
+
+          { displayName :  "Edson Magombo" ? (
+       <AdminPage />
+       ) :(
+          
            <> 
-           
+          
       <Header />
+      
       <Switch>
       <Route exact path='/' render ={(props)=> <ImageSlider slides={SliderData} props = {props} />   } />
       {/* <Route exact path='/' render ={(props)=> <Footer props={props}  />   } /> */}
@@ -34,6 +41,7 @@ return (
       </Switch>
       <Footer />
       </>
+       )}
       )}
       </Router>
       

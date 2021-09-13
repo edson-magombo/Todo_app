@@ -1,13 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 // import  HelpOutLineIcon from "@material-ui/icon/HelpOutLine";
-// import HelpOutlineIcon from "./@material-ui/icon/HelpOutline";
 import "./Header.css";
 import { useStateValue } from './StateProvider';
 import { auth } from '../firebase';
 
 function Header() {
-  const [{user}]= useStateValue();
+  const [{user}, setUser]= useStateValue();
 
   return (
     <div className="header">
@@ -29,9 +28,9 @@ function Header() {
         
         
         <div className = "name">
-          <h6>{user.displayName} <button className= "button" onClick={(e)=> {
+          <h6>{user.displayName} <button className= "button" onClick={ (e) => {
             e.preventDefault();
-            auth.signOut() }}>LogOut</button></h6>
+            auth.signOut()}}>LogOut</button></h6>
         </div>
         
           

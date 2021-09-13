@@ -18,8 +18,25 @@
     height: 16vh;
     align-content: center;
 }
+.modalNavbar {
+    /* background : ; */
+    height: 10vh;
+    align-content: center;
+    padding-bottom: 50px;
+}
+
 
 .Navbar .container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    align-content: center;
+    justify-content: flex-start;
+    /* justify-content: space-between; */
+}
+.modalNavbar .modalcontainer {
     width: 90%;
     margin: auto;
     display: flex;
@@ -74,6 +91,11 @@
     list-style: square;
     padding-left: 2rem;
     font-size: 1.2rem;
+}
+.modalsignup{
+
+  display: flex;
+  flex-direction: column ;  
 }
 
 @media (max-width: 720px) {

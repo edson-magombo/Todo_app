@@ -4,8 +4,10 @@
 .App{
     background-color: gainsboro;
     background-image: src="./lights.JFIF";
+    padding-left:20px;
+    padding-right: 20px;
 }
 .slider{
-    padding-bottom: 200px;
+    /* padding-bottom: 200px; */
     /* padding-top: 200px; */
 }

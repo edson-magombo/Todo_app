@@ -2,6 +2,7 @@ import React, {useState, useEffect } from 'react';
 import "./Inquiry.css";
 import Post from "./Post" 
 import  db   from "../firebase"; 
+import {moment, note} from 'moment';
 import ImageUpload from './ImageUpload';
 import { useStateValue } from './StateProvider';
 function Inquiry() {
@@ -9,7 +10,9 @@ function Inquiry() {
     const [inquiries, setInquiries] = useState([]);
   //EFFECT --> Runs a piece of code on a specific condition 
 useEffect(() => {
-db.collection("inquiries").onSnapshot(snapshot =>{
+db.collection("inquiries")
+.orderBy("timestamp", "asc") 
+.onSnapshot(snapshot =>{
   setInquiries(
     snapshot.docs.map((doc) =>  ({
       id: doc.id,
@@ -34,7 +37,7 @@ return (
             displayName={inquiry.displayName}
             message={inquiry.message}
             imageURL={inquiry.imageURL}
-            timestamp={Date.now()}
+            timestamp={inquiry.timestamp}
             />
           ))
         }</div>
