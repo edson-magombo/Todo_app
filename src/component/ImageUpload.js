@@ -54,15 +54,15 @@ function ImageUpload({displayName} ) {
     }
     return (
         < div className= "imageupload">
-
-            <h1>
-                Report your inquiries here!
-            </h1>
-
-        <progress className="imageupload_progress" value={progress} max="100" />
-            <input type="text" placeholder="Enter your message..."onChange={event => setMessage(event.target.value)} value = {message} />
-            <input type="file" onChange={handleChange}/>
-            <Button onClick={handleUpload}>Send</Button>
+             <progress className="imageupload_progress" value={progress} max="100" />
+             <h5>
+                 How may we be of assistance?
+             </h5>
+             <textarea type="text" placeholder="Description..."onChange={event => setMessage(event.target.value)} value = {message} />
+             <h5>Would you like to attach a photo?</h5>
+             <input type="file" onChange={handleChange}/>
+             <br/>
+            <Button onClick={handleUpload}>Report</Button>
         
  
         </div>

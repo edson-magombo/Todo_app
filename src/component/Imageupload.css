@@ -1,17 +1,55 @@
 .imageupload{
-    display: flex;
-    flex-direction: column;
-    width: 60%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    position: fixed;
-    background-color: white ;
-    border-top: 2px solid gainsboro;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40rem;
+    padding: 2.5rem;
+    box-sizing: border-box;
+    border: 5px solid #3e5a91; 
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+
 
  
 }
 .imageupload_progress{
     width: 100%;
+}
+
+.imageupload h5{
+    font-style: bold;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.imageupload textarea {
+    overflow:hidden;
+    resize: none;
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none; 
+}
+
+.imageupload Button {
+    display: inline-block;
+    padding: 0.7em 1.7em;
+    margin: 0.03em 0.03 0;
+    border-radius: 0.2em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto',sans-serif;
+    font-weight: 400;
+    color:  white;
+    background-color: #3e5a91;
+    text-align: center;
+    position: relative;
+    
 }
