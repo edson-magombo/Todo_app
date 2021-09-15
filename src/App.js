@@ -24,9 +24,9 @@ return (
            <Landingpage />
          ): (
 
-          { displayName :  "Edson Magombo" ? (
-       <AdminPage />
-       ) :(
+      //     { displayName :  "Edson Magombo" ? (
+      //  <AdminPage />
+      //  ) :(
           
            <> 
           
@@ -42,7 +42,7 @@ return (
       <Footer />
       </>
        )}
-      )}
+      {/* )} */}
       </Router>
       
 

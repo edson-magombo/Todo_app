@@ -2,12 +2,20 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 // import  HelpOutLineIcon from "@material-ui/icon/HelpOutLine";
 import "./Header.css";
+import LandingPage from "./Landingpage"
 import { useStateValue } from './StateProvider';
 import { auth } from '../firebase';
 
 function Header() {
   const [{user}, setUser]= useStateValue();
 
+  const logout = (e) => 
+    e.preventDefault();
+  
+    // localStorage.clear();
+    
+        window.location.href = '/Landingpage';
+// }
   return (
     <div className="header">
         <div className= "header_log">
@@ -28,9 +36,7 @@ function Header() {
         
         
         <div className = "name">
-          <h6>{user.displayName} <button className= "button" onClick={ (e) => {
-            e.preventDefault();
-            auth.signOut()}}>LogOut</button></h6>
+          <h6>{user.displayName} <button className= "button" onClick={logout}>LogOut</button></h6>
         </div>
         
           
