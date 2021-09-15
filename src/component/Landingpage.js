@@ -201,25 +201,33 @@ return ()=>{
             
             <div className="services-list">
               <h1>What we offer</h1>
-              <img className="images" src="/electricity.jpg" alt="" />
-              <h4>Electricity fixes</h4>
+              <div>
+              
+              <h4><img className="images" src="/electricity.jpg" alt="" />Electricity fixes</h4>
               <p>We fix problems to do with electric outlets.Examples include sockets that are not working, bulbs that are not giving light,  </p>
-              <hr/>
-              <img className="images" src="/plumbing.jpg" alt="" />
-              <h4>Plumbing</h4>
+              
+              </div><hr/>
+              
+              <h4><img className="images" src="/plumbing.jpg" alt="" />Plumbing</h4>
               <p>Are the pipes leaking? is any water otlet clogged? Is there any problem with the gizers? report port for maintainace </p>
               <hr/>
-              <img className="images" src="/building.jpg" alt="" />
-              <h4>Building</h4>
+              <div>
+              
+              <h4><img className="images" src="/building.jpg" alt="" />Building</h4>
               <p> All issues to do with the infrastructure are also taken care of by our department.these include any cracks on walls that are aking you uncomfotable, brocken walls </p>
+              </div>
               <hr/>
-              <img className="images" src="/carpentry.jpg" alt="" />
-              <h4>Carpentry</h4>
+              <div>
+              
+              <h4><img className="images" src="/carpentry.jpg" alt="" />Carpentry</h4>
               <p>Maintanance issues that involve wood can also be adressed by this department. These include doors,capboards, drawers</p>
+              </div>
               <hr/>
-              <img className="images" src="/cleaning.jpg" alt="" />
-              <h4>Cleaning</h4>
+              <div>
+              
+              <h4><img className="images" src="/cleaning.jpg" alt="" />Cleaning</h4>
               <p> Are some places not clean or tidy? contact us   </p>
+              </div> 
             </div>
           </div>
       </div>

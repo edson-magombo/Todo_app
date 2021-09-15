@@ -8,6 +8,7 @@ import Footer from "./component/Footer/Footer";
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Landingpage from './component/Landingpage';
 import Inquiry from './component/Inquiry';
+import About from './component/About';
 
 import { useStateValue } from './component/StateProvider';
 
@@ -36,7 +37,7 @@ return (
       <Route exact path='/' render ={(props)=> <ImageSlider slides={SliderData} props = {props} />   } />
       {/* <Route exact path='/' render ={(props)=> <Footer props={props}  />   } /> */}
         <Route exact path ='/Inquiry' render={(props)=> <Inquiry props = {props}/> }/>
-        {/* <Route exact path='/' render ={(props)=> <Footer props={props}  />   } /> */}
+        <Route exact path='/About' render ={(props)=> <About props={props}  />   } />
         
       </Switch>
       <Footer />

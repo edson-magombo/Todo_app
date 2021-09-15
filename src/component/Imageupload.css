@@ -2,11 +2,12 @@
     position: absolute;
     top: 50%;
     left: 50%;
+    height: 340px;
     transform: translate(-50%, -50%);
-    width: 40rem;
+    width: 50rem;
     padding: 2.5rem;
     box-sizing: border-box;
-    border: 5px solid #3e5a91; 
+    border: 5px solid rgb(68, 68, 194); 
     -webkit-border-radius: 8px;
     border-radius: 8px;
 
@@ -47,8 +48,8 @@
     text-decoration: none;
     font-family: 'Roboto',sans-serif;
     font-weight: 400;
-    color:  white;
-    background-color: #3e5a91;
+    /* color:  white; */
+    background-color: rgb(68, 68, 194);
     text-align: center;
     position: relative;
     

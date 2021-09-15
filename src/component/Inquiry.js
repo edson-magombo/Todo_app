@@ -29,7 +29,7 @@ return (
           <div className="upload">
              <ImageUpload displayName={user.displayName} /> 
              </div>
-             <div className="inquiries">
+             {/* <div className="inquiries">
         {
           inquiries.map(({id, inquiry})=>(
             <Post 
@@ -40,7 +40,7 @@ return (
             timestamp={inquiry.timestamp}
             />
           ))
-        }</div>
+        }</div> */}
 
 
     

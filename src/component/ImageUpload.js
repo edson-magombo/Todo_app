@@ -3,6 +3,7 @@
 import { storage} from '../firebase';
 import firebase from 'firebase';
 import  db   from "../firebase";
+import './Imageupload.css'
 
 function ImageUpload({displayName} ) {
     const [image, setImage] = useState(null);

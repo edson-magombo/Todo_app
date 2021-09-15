@@ -9,13 +9,13 @@ import { auth } from '../firebase';
 function Header() {
   const [{user}, setUser]= useStateValue();
 
-  const logout = (e) => 
-    e.preventDefault();
+  // const logout = (e) => 
+  //   e.preventDefault();
   
-    // localStorage.clear();
+  //   localStorage.clear();
     
-        window.location.href = '/Landingpage';
-// }
+  //       window.location.href = '/Landingpage';
+
   return (
     <div className="header">
         <div className= "header_log">
@@ -29,14 +29,14 @@ function Header() {
       <div className = "menu">
         <Link className = "link" to = "/">HOME</Link>
         <Link className = "link" to = "/Inquiry">INQUIRES</Link>
-        <Link className = "link" to = "/">ABOUT US</Link>
+        <Link className = "link" to = "/About">ABOUT US</Link>
       </div>
       </div>
       <div className= "header_support">
         
         
         <div className = "name">
-          <h6>{user.displayName} <button className= "button" onClick={logout}>LogOut</button></h6>
+          <h6>{user.displayName} <button className= "button" onClick={()=>auth.signOut()}>LogOut</button></h6>
         </div>
         
           
