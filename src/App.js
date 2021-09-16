@@ -9,6 +9,7 @@ import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Landingpage from './component/Landingpage';
 import Inquiry from './component/Inquiry';
 import About from './component/About';
+import Showcase from './Showcase';
 
 import { useStateValue } from './component/StateProvider';
 
@@ -34,7 +35,9 @@ return (
       <Header />
       
       <Switch>
-      <Route exact path='/' render ={(props)=> <ImageSlider slides={SliderData} props = {props} />   } />
+      <Route exact path='/' render ={(props)=> <Showcase props={props}  />   } />
+      <Route exact path='/AdminPage' render ={(props)=> <AdminPage props={props}  />   } />
+      {/* <Route exact path='/' render ={(props)=> <ImageSlider slides={SliderData} props = {props} />   } /> */}
       {/* <Route exact path='/' render ={(props)=> <Footer props={props}  />   } /> */}
         <Route exact path ='/Inquiry' render={(props)=> <Inquiry props = {props}/> }/>
         <Route exact path='/About' render ={(props)=> <About props={props}  />   } />
@@ -43,7 +46,7 @@ return (
       <Footer />
       </>
        )}
-      {/* )} */}
+      
       </Router>
       
 

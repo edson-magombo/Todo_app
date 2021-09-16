@@ -9,7 +9,7 @@ import { auth } from '../firebase';
 function Header() {
   const [{user}, setUser]= useStateValue();
 
-  // const logout = (e) => 
+  // const Logout = (e) => 
   //   e.preventDefault();
   
   //   localStorage.clear();
@@ -27,7 +27,7 @@ function Header() {
       <h1>Campus Maintenance Management System</h1>
       </div>
       <div className = "menu">
-        <Link className = "link" to = "/">HOME</Link>
+        <Link className = "link" to = "/" >HOME</Link>
         <Link className = "link" to = "/Inquiry">INQUIRES</Link>
         <Link className = "link" to = "/About">ABOUT US</Link>
       </div>
@@ -36,7 +36,7 @@ function Header() {
         
         
         <div className = "name">
-          <h6>{user.displayName} <button className= "button" onClick={()=>auth.signOut()}>LogOut</button></h6>
+          <h6>{user.displayName} <button className= "button" onClick ={(e) => {window.location.href = '/Landingpage';}}>LogOut</button></h6>
         </div>
         
           

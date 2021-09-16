@@ -8,6 +8,15 @@
     margin: 0px 300px;
     text-align: start;
 }
+.paralink{
+    color: blue;
+    margin-left: 2px;
+    align-items: center;
+    text-align: center;
+    padding: 2px;
+    margin: 0px 300px;
+    text-align: start;
+}
 h1{
     text-align: center;
 }

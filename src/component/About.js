@@ -2,6 +2,7 @@ import React, {useState, useEffect } from 'react';
 import "./About.css";
 import Post from "./Post" 
 import  db   from "../firebase";
+import { Link } from 'react-router-dom';
 
 
 function About() {
@@ -41,6 +42,7 @@ return (
                <p className="para">Fred Likaka</p>
                <p className="para">Edson Magombo</p>
                <p className="para">Clement Thulawena</p>
+               <Link className = "paralink" to = "/AdminPage">AdminDashboard</Link>
                </div>
                </div>
 

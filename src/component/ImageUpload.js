@@ -63,7 +63,7 @@ function ImageUpload({displayName} ) {
              <h5>Would you like to attach a photo?</h5>
              <input type="file" onChange={handleChange}/>
              <br/>
-            <Button onClick={handleUpload}>Report</Button>
+            <Button onClick={handleUpload} value="Go!">Report</Button>
         
  
         </div>

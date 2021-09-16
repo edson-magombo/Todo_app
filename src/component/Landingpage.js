@@ -137,7 +137,7 @@ return ()=>{
       value={password}
       onChange={(e)=>setPassword(e.target.value)} /> 
 
-      <Button onClick={signUp}>Login</Button>
+      <Button onClick={signUp}>Register</Button>
       
       </form>
     </div>
@@ -195,41 +195,13 @@ return ()=>{
           <div className="services-grid">
             <div className="signin">
               <h1>Sign up to start the sessions</h1>
+              <div className="ctas">
               <Button className="signup-btn" onClick = {()=>setOpenSignIn(true)}>Sign In</Button>
               <Button className="signup-btn" onClick = {()=>setOpen(true)}>Register</Button>
-            </div>
-            
-            <div className="services-list">
-              <h1>What we offer</h1>
-              <div>
-              
-              <h4><img className="images" src="/electricity.jpg" alt="" />Electricity fixes</h4>
-              <p>We fix problems to do with electric outlets.Examples include sockets that are not working, bulbs that are not giving light,  </p>
-              
-              </div><hr/>
-              
-              <h4><img className="images" src="/plumbing.jpg" alt="" />Plumbing</h4>
-              <p>Are the pipes leaking? is any water otlet clogged? Is there any problem with the gizers? report port for maintainace </p>
-              <hr/>
-              <div>
-              
-              <h4><img className="images" src="/building.jpg" alt="" />Building</h4>
-              <p> All issues to do with the infrastructure are also taken care of by our department.these include any cracks on walls that are aking you uncomfotable, brocken walls </p>
-              </div>
-              <hr/>
-              <div>
-              
-              <h4><img className="images" src="/carpentry.jpg" alt="" />Carpentry</h4>
-              <p>Maintanance issues that involve wood can also be adressed by this department. These include doors,capboards, drawers</p>
-              </div>
-              <hr/>
-              <div>
-              
-              <h4><img className="images" src="/cleaning.jpg" alt="" />Cleaning</h4>
-              <p> Are some places not clean or tidy? contact us   </p>
               </div> 
             </div>
-          </div>
+            
+            </div>
       </div>
   </div>
         
